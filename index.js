@@ -8,6 +8,7 @@ const handleSubmit = function(ev) {
     users.innerHTML += '<p>' + name + ', ' + age + '</p>'
 
     ev.target.reset()
+    ev.target.name.focus()
 
     document.body.style.backgroundColor = "red"
     document.body.style.fontFamily = "Impact, Charcoal, sans-serif"
