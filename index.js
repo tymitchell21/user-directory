@@ -1,11 +1,14 @@
-const button = document.querySelector('button.greeting')
+const form = document.querySelector('#userForm')
 
-function changeText() {
-    const heading = document.querySelector('h1.heading2')
-    heading.innerText = document.getElementById('text').value
+const handleSubmit = function(ev) {
+    ev.preventDefault()
+    const heading = document.querySelector('#font')
+    const userName = ev.target.userName.value
+    heading.textContent = userName
+
     document.body.style.backgroundColor = "red"
     document.body.style.fontFamily = "Impact, Charcoal, sans-serif"
     document.getElementById('girlfriend').style = "display: block"
 }
 
-button.addEventListener('click', changeText)
+form.addEventListener('submit', handleSubmit)
