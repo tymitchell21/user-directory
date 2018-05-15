@@ -5,7 +5,11 @@ const handleSubmit = function(ev) {
     const users = document.querySelector('#users')
     const name = ev.target.name.value
     const age = ev.target.age.value
-    users.innerHTML += `<p>${name}, ${age}</p>`
+
+    const p = document.createElement('p');
+    p.textContent = `${name}, ${age}`
+
+    users.appendChild(p)
 
     ev.target.reset()
     ev.target.name.focus()
