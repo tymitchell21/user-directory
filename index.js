@@ -2,9 +2,10 @@ const form = document.querySelector('#userForm')
 
 const handleSubmit = function(ev) {
     ev.preventDefault()
-    const heading = document.querySelector('#font')
+    const users = document.querySelector('#users')
     const userName = ev.target.userName.value
-    heading.textContent = userName
+    users.textContent += ' ' + userName
+    ev.target.userName.value = ''
 
     document.body.style.backgroundColor = "red"
     document.body.style.fontFamily = "Impact, Charcoal, sans-serif"
