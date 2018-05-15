@@ -15,9 +15,9 @@ const handleSubmit = function(ev) {
     ev.target.reset()
     ev.target.name.focus()
 
-    //document.body.style.backgroundColor = color
+    document.body.style.backgroundColor = color
     document.body.style.fontFamily = "Impact, Charcoal, sans-serif"
-    p.style.backgroundColor = color
+    //p.style.backgroundColor = color
     document.getElementById('girlfriend').style = "display: block"
 }
 
