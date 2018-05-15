@@ -3,10 +3,11 @@ const form = document.querySelector('#userForm')
 const handleSubmit = function(ev) {
     ev.preventDefault()
     const users = document.querySelector('#users')
-    const userName = ev.target.userName.value
-    users.innerHTML += '<p>' + userName + '</p>'
+    const name = ev.target.name.value
+    const age = ev.target.age.value
+    users.innerHTML += '<p>' + name + ', ' + age + '</p>'
 
-    ev.target.userName.value = ''
+    ev.target.reset()
 
     document.body.style.backgroundColor = "red"
     document.body.style.fontFamily = "Impact, Charcoal, sans-serif"
