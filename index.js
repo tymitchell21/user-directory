@@ -4,8 +4,8 @@ const handleSubmit = function(ev) {
     ev.preventDefault()
     const users = document.querySelector('#users')
     const userName = ev.target.userName.value
-    users.textContent += ' ' + userName
-    
+    users.innerHTML += '<p>' + userName + '</p>'
+
     ev.target.userName.value = ''
 
     document.body.style.backgroundColor = "red"
