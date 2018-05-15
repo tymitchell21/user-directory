@@ -5,6 +5,7 @@ const handleSubmit = function(ev) {
     const users = document.querySelector('#users')
     const userName = ev.target.userName.value
     users.textContent += ' ' + userName
+    
     ev.target.userName.value = ''
 
     document.body.style.backgroundColor = "red"
