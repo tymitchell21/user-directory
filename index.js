@@ -1,8 +1,8 @@
 const button = document.querySelector('button.greeting')
 
-function changeText(ev) {
+function changeText() {
     const heading = document.querySelector('h1.heading2')
-    heading.innerText = "I am a G"
+    heading.innerText = document.getElementById('text').value.toString()
 }
 
 button.addEventListener('click', changeText)
