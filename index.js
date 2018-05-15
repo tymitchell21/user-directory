@@ -7,10 +7,19 @@ const handleSubmit = function(ev) {
     const age = ev.target.age.value
     const color = ev.target.favoriteColor.value
 
-    const p = document.createElement('p');
-    p.textContent = `${name}, ${age}`
+    const nameItem = document.createElement('li')
+    nameItem.textContent = `Name: ${name}`
 
-    users.appendChild(p)
+    const ageItem = document.createElement('li')
+    ageItem.textContent = `Age: ${age}`
+
+    const colorItem = document.createElement('li')
+
+    const list = document.createElement('ul')
+    list.appendChild(nameItem)
+    list.appendChild(ageItem)    
+
+    users.appendChild(list)
 
     ev.target.reset()
     ev.target.name.focus()
