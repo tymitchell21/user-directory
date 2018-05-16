@@ -1,5 +1,6 @@
 const form = document.querySelector('#userForm')
 
+//Submits form and creates a new unordered list by calling other functions
 const handleSubmit = function(ev) {
     ev.preventDefault()
     const users = document.querySelector('#users')
@@ -21,6 +22,7 @@ const handleSubmit = function(ev) {
 
 form.addEventListener('submit', handleSubmit)
 
+//Creates a div, gives it a background color, height and width, and then returns it
 function renderColor(color) {
     const colorDiv = document.createElement('div')
     colorDiv.style.backgroundColor = color
@@ -30,6 +32,7 @@ function renderColor(color) {
     return colorDiv
 }
 
+//Creates a list item, and puts text into it
 function renderListItem(text, color) {
     const item = document.createElement('li')
     item.textContent = text
@@ -40,6 +43,7 @@ function renderListItem(text, color) {
     return item
 }
 
+//Creates an unordered list
 function renderList(name, age, color) {
     const list = document.createElement('ul')
     list.appendChild(renderListItem(`Name: ${name}`, null))
