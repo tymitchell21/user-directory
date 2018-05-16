@@ -33,11 +33,13 @@ function renderColor(color) {
 }
 
 //Creates a list item, and puts text into it
-function renderListItem(text, color) {
+function renderListItem(label, value, color) {
     const item = document.createElement('li')
-    item.textContent = text
-    if (color){
-        item.appendChild(renderColor(color))
+    item.textContent = `${label}: `
+    try {
+        item.appendChild(value)
+    } catch(e) {
+        item.textContent += value
     }
 
     return item
@@ -46,9 +48,9 @@ function renderListItem(text, color) {
 //Creates an unordered list
 function renderList(name, age, color) {
     const list = document.createElement('ul')
-    list.appendChild(renderListItem(`Name: ${name}`, null))
-    list.appendChild(renderListItem(`Age: ${age}`, null))
-    list.appendChild(renderListItem('Favorite Color:', color))
+    list.appendChild(renderListItem('Name', name))
+    list.appendChild(renderListItem('Age', age))
+    list.appendChild(renderListItem('Favorite Color', renderColor(color)))
     
     return list
 }
