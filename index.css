@@ -4,9 +4,12 @@ body {
     font-family: 'Slabo 27px', serif;
     background-color: #8D8741;
 }
+main {
+    display: flex;
+    justify-content: space-around;
+}
 #formSubmit {
     text-align: center;
-    float: center;
     border-style: solid;
     border-width: 3px;
     border-color: #BC986A;
@@ -16,30 +19,32 @@ body {
     width: 500px;
     padding: 20px;
 }
-dl {
+
+dl > li {
     list-style-type: none;
-    list-style-position: outside;
 }
+
 #newContent {
-    text-align: center;
     border-style: solid;
     border-width: 3px;
     border-color: #BC986A;
     background-color: #FBEEC1;
-    margin-left: auto;
+    /* margin-left: auto;
     margin-right: auto;
-    width: 500px;
+    width: 500px; */
     padding: 20px;
 }
+
 #users dl li {
-    text-indent: -40px;
+    text-indent: 0px;
 }
+
 #users dl li div {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border: 1px solid #BC986A;
 }
 img {
-    margin-left: auto;
+    /* margin-left: auto;
     margin-right: auto;
-    width: 200px;
+    width: 200px; */
 }
