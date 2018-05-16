@@ -6,7 +6,7 @@ body {
 }
 main {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 #formSubmit {
     text-align: center;
@@ -17,6 +17,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     width: 500px;
+    height: 300px;
     padding: 20px;
 }
 
@@ -29,31 +30,22 @@ dl > li {
 }
 
 dl:nth-of-type(even) {
-    background-color: blue;
+    background-color: #BC986A;
 }
 
 dl:nth-of-type(odd) {
-    background-color: green;
+    background-color: #DAAD86;
 }
 
 #newContent {
+    display: none;
     border-style: solid;
     border-width: 3px;
     border-color: #BC986A;
     background-color: #FBEEC1;
-    /* margin-left: auto;
-    margin-right: auto;
-    width: 500px; */
     padding: 20px;
 }
 
 #users dl li div {
-    /* margin: 0 auto; */
     border: 1px solid #BC986A;
-}
-
-img {
-    /* margin-left: auto;
-    margin-right: auto;
-    width: 200px; */
 }

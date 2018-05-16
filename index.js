@@ -62,9 +62,7 @@ const handleSubmit = function(ev) {
     ev.target.reset()
     ev.target.name.focus()
 
-    // //document.getElementById('newContent').style.backgroundColor = user[color]
-    // //p.style.backgroundColor = color
-    document.getElementById('girlfriend').style = "display: block"
+    document.getElementById('newContent').style = "display: block"
 }
 
 form.addEventListener('submit', handleSubmit)
