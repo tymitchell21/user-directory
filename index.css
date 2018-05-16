@@ -6,7 +6,7 @@ body {
     text-align: center;
     float: center;
     border-style: solid;
-    border-width: 5px;
+    border-width: 3px;
     border-color: black;
     background-color: #E8A87C;
     margin-left: auto;
@@ -21,7 +21,7 @@ ul {
 #newContent {
     text-align: center;
     border-style: solid;
-    border-width: 5px;
+    border-width: 3px;
     border-color: black;
     background-color: #E8A87C;
     margin-left: auto;
@@ -29,8 +29,12 @@ ul {
     width: 500px;
     padding: 20px;
 }
+#users ul li {
+    text-indent: -40px;
+}
 #users ul li div {
     margin: 0 auto;
+    border: 1px solid black;
 }
 img {
     margin-left: auto;

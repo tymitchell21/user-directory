@@ -44,7 +44,7 @@ function renderList(name, age, color) {
     const list = document.createElement('ul')
     list.appendChild(renderListItem(`Name: ${name}`, null))
     list.appendChild(renderListItem(`Age: ${age}`, null))
-    list.appendChild(renderListItem('Favorite Color', color))
+    list.appendChild(renderListItem('Favorite Color:', color))
     
     return list
 }
