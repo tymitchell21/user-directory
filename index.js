@@ -16,19 +16,26 @@ function renderColor(color) {
 //Creates a list item, and puts text into it
 function renderListItem(label, value, color) {
     const item = document.createElement('li')
-    item.textContent = `${label}: `
+
+    const term = document.createElement('dt')
+    term.textContent = label
+
+    const description = document.createElement('dd')
+
     try {
-        item.appendChild(value)
+        description.appendChild(value)
     } catch(e) {
-        item.textContent += value
+        description.textContent += value
     }
 
+    item.appendChild(term)
+    item.appendChild(description)
     return item
 }
 
 //Builds list
 function buildList(data) {
-    const list = document.createElement('ul')
+    const list = document.createElement('dl')
 
     const labels = Object.keys(data)
     labels.forEach(label => {
@@ -46,7 +53,7 @@ const handleSubmit = function(ev) {
     const user = {
         userName: f.name.value,
         age: f.age.value,
-        color: renderColor(f.favoriteColor.value),
+        favoriteColor: renderColor(f.favoriteColor.value),
     }
 
     const users = document.querySelector('#users')
@@ -55,9 +62,8 @@ const handleSubmit = function(ev) {
     ev.target.reset()
     ev.target.name.focus()
 
-    //document.getElementById('newContent').style.backgroundColor = user[color]
-    document.body.style.fontFamily = "Impact, Charcoal, sans-serif"
-    //p.style.backgroundColor = color
+    // //document.getElementById('newContent').style.backgroundColor = user[color]
+    // //p.style.backgroundColor = color
     document.getElementById('girlfriend').style = "display: block"
 }
 

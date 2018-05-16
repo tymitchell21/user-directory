@@ -14,7 +14,7 @@ body {
     width: 500px;
     padding: 20px;
 }
-ul {
+dl {
     list-style-type: none;
     list-style-position: outside;
 }
@@ -29,10 +29,10 @@ ul {
     width: 500px;
     padding: 20px;
 }
-#users ul li {
+#users dl li {
     text-indent: -40px;
 }
-#users ul li div {
+#users dl li div {
     margin: 0 auto;
     border: 1px solid #BC986A;
 }
