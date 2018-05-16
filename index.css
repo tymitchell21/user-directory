@@ -1,3 +1,16 @@
 body {
     font-family: sans-serif;
 }
+#formSubmit{
+    text-align: center;
+    float: center;
+}
+ul {
+    list-style-type: none;
+}
+#newContent {
+    float: center;
+}
+#users {
+    float: left;
+}
